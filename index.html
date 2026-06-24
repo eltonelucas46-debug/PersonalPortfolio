@@ -8,6 +8,11 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     
     <style>
+      .standalone-img {
+    display: block;
+    width: 100%; /* Makes image fill width */
+    height: auto;
+}
       .leader-link {
     color: #0077cc;
     text-decoration: none;
@@ -21,8 +26,8 @@
       .card-container {
     display: flex;
     flex-wrap: wrap;
-    gap: 20px;
-    padding: 20px;
+    gap: 15px;
+    padding: 0 10px;
     justify-content: center;
 }
 
@@ -30,8 +35,9 @@
     background: var(--bg-color); /* Uses your existing dark/light mode variable */
     border: 1px solid magenta;
     border-radius: 15px;
-    padding: 25px;
-    width: 300px;
+    padding: 20px;
+    width: 100%;
+    box-sizing: border-box;
     box-shadow: 0 4px 15px rgba(0,0,0,0.1);
     transition: transform 0.3s ease;
 }
@@ -101,11 +107,11 @@ body.dark-mode .eduanime {
 }
 
 .home-image-container img {
-    width: 100%;
-    max-width: 400px; /* Adjust size to your preference */
+    width: auto;
+    max-width: 100%; /* Adjust size to your preference */
     height: auto;
-    border-radius: 15px; /* Adds a modern, soft look */
-    box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+    border-radius: 0; /* Adds a modern, soft look */
+    box-shadow: none;
     transition: transform 0.3s ease;
 }
 
@@ -168,7 +174,7 @@ body.dark-mode .eduanime {
         #sidebar a:hover { background: lightcyan; }
 
         /* Content Sections */
-        .content-section { display: none; padding: 40px; min-height: 300px; }
+        .content-section { display: none; padding: 20px 0; min-height: 300px; }
         .active-section { display: block; }
 
         /* Typography */
@@ -180,6 +186,10 @@ body.dark-mode .eduanime {
         h4 { font-family: 'Caveat', cursive; }
         h5 { font-family: 'Cinzel', serif; }
         h6 { font-family: 'Exo 2', sans-serif; }
+      p{
+        padding: 0 20px;
+        margin: 10px 0;
+        }
 
         /* Footer */
         footer { text-align: center; padding: 20px; border-top: 3px solid darkgreen; margin-top: 5px;}
@@ -225,7 +235,7 @@ body.dark-mode .eduanime {
 <hr class="homesecbreak">
   <div class="home-image-container">
     <figure>
-    <img src="homepic.png" alt="Eltone Lucas Profile Photo">
+    <img src="homepic.png" class="standalone-img" alt="Eltone Lucas Profile Photo">
       <figcaption> Eltone Lucas-Proffesional Web Developer.</figcaption>
       </figure>
     </div>
@@ -252,7 +262,7 @@ body.dark-mode .eduanime {
 <div id="education" class="content-section"><h2 class="eduanime">Education.</h2><h1 style="text-align:center;font-size:25;"><b>Academic history and certifications.</b></h1>
   <div class="home-image-container">
         <figure>
-            <img src="edupage.png" alt="Eltone Lucas Education">
+            <img src="edupage.png" class="standalone-img" alt="Eltone Lucas Education">
             <figcaption>My Academic Journey and Certifications.</figcaption>
         </figure>
     </div>
@@ -271,7 +281,7 @@ body.dark-mode .eduanime {
   <h1 style="text-align:center;"> Nyamanga Disii Primary School.</h1>
   <div class="home-image-container">
     <figure>
-      <img src="nyamanga.jpg" alt="Primary school image">
+      <img src="nyamanga.jpg" class="standalone-img" alt="Primary school image">
       <figcaption>Nyamanga Disii ECDE Kids</figcaption>
       </figure>
     </div>
@@ -296,7 +306,7 @@ Looking back, my primary school years were filled with valuable lessons, memorab
   <h1 style="text-align:center;">Kanga High School</h1>
   <div class="home-image-container">
     <figure>
-      <img src="khs.png" alt="Kanga High School">
+      <img src="khs.png" class="standalone-img" alt="Kanga High School">
       <figcaption>Kanga School main gate</figcaption>
     </figure>
     </div>
