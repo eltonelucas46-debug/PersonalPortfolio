@@ -8,6 +8,23 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     
     <style>
+      .hobbyanime {
+    font-family: 'Orbitron', sans-serif; /* Stylish tech font */
+    font-size: 3rem;
+    text-align: center;
+    color: #2c3e50;
+    animation: pulseText 2s infinite ease-in-out;
+}
+
+@keyframes pulseText {
+    0%, 100% { opacity: 1; transform: scale(1); }
+    50% { opacity: 0.7; transform: scale(1.05); }
+}
+
+/* Dark mode adjustment */
+body.dark-mode .hobbyanime {
+    color: #00d4ff;
+}
       .standalone-img {
     display: block;
     width: 100%; /* Makes image fill width */
@@ -65,7 +82,7 @@
     width: 100%;
     height: 6px;
     margin: 30px 0;
-    background: linear-gradient(90deg, #007bff, #00d4ff, #007bff);
+    background: linear-gradient(90deg, #007bff, magenta, #007bff);
     background-size: 200% 100%;
     border-radius: 2px;
     animation: pulseGradient 4s infinite ease-in-out;
@@ -82,12 +99,12 @@
     text-align: center;
     font-size: 2.8rem;
     text-transform: uppercase;
-    background: linear-gradient(90deg, #333 0%, #007bff 50%, #333 100%);
+    background: linear-gradient(90deg, blue, green, magenta,red);
     background-size: 200% auto;
     background-clip: text;
     -webkit-background-clip: text;
     color: transparent;
-    animation: shine 3s linear infinite;
+    animation: shine 2s linear infinite;
 }
 
 @keyframes shine {
@@ -121,8 +138,8 @@ body.dark-mode .eduanime {
 
       .homesecbreak {
     width: 100%;
-    height: 5px;
-    background-color: magenta;
+    height: 6px;
+    background-color: lightblue;
     margin: 20px 0;
     position: relative;
     overflow: hidden;
@@ -134,7 +151,7 @@ body.dark-mode .eduanime {
     left: -100%;
     width: 100%;
     height: 100%;
-    background: linear-gradient(90deg, transparent,Red, transparent);
+    background: linear-gradient(90deg, transparent,green, transparent);
     animation: slideLine 3s infinite ease-in-out;
 }
 
@@ -326,14 +343,63 @@ As I look ahead to university and future opportunities, I remain grateful for th
   <h5 style="text-align:center; font-size:25px;">That is all about my education for now. University Education will be updated as soon as i report.</h5>
  </div> 
 
-<div id="hobbies" class="content-section"><h3>Hobbies</h3><p>Things I enjoy doing in my free time.</p></div>
-<div id="church" class="content-section"><h4>Church</h4><p>My spiritual journey and involvements.</p></div>
+<div id="hobbies" class="content-section"><h3 class="hobbyanime"style="color:magenta;">HOBBIES</h3><h4 style="font-size:22px;text-align:center;">THINGS I ENJOY DOING IN MY FREE TIME</h4>
+  <div class="home-image-container">
+    <img src="hobby.jpg" alt="Hobby Image">
+    </div>
+  <hr class="edubreak">
+  <div class="card-container">
+    <div class="card">
+      <div class="card-icon"><i class="fas fa-code"></i></div>
+      <h1>Web Development & Coding</h1>
+      <div class="home-image-container">
+        <img src="coding.jpg" alt="Coding Image">
+        </div>
+      <p>This is My Favorite Hobby.As an upcoming Web Developer, I spend the better part of my day learning Frontend web languages like HTML,CSS and JAVASCRIPT.From there i'll upgrade to backend languages like PHP and SQL.This Personal web portfolio is purely my work.</p>
+      </div>
+    </div><br>
+    <div class="card-container">
+      <div class="card">
+        <div class="card-icon"><i class="fas fa-futbol"></i></div>
+        <h1>Football</h1>
+        <div class="home-image-container">
+          <img src="futbol.jpg" alt="Football Image"></div>
+        <p>My second hobby is football. Im both a fan a football player. I had played for Nyamanga U15. I am a fan of different Football Clubs and National Teams.See More In <a href="#football" class="leader-link">Football Section</a></p>  
+    </div>
+      </div><br>
+      <div class="card-container">
+        <div class="card">
+          <div class="card-icon"><i class="fas fa-palette"></i></div>
+          <h1>Watching </h1>
+          <div class="home-image-container">
+            <img src="watch.jpg"alt="Watching Image"></div>
+          <p> I sometimes pass time by watching TV programmes,series & movies. My top TV programmes are Nat Geo Wild, Football, both live and replay matches and Daily News. I do watch series and Movies. The Day Of Jackal Is My Top Series.</p>
+        </div>
+        </div><br>
+    <div class="card-container">
+      <div class="card">
+        <div class="card-icon"><i class="fas fa-gamepad"></i></div>
+      <h1>Gaming & Puzzle Solving</h1>
+        <div class="home-image-container">
+          <img src="rubik.jpg" alt="Game Image">
+          </div>
+        <p>I play both physical and computer games/puzzle. My best is Rubiks Cube Solving. I also play eFootball and Call Of Duty.</p>
+        </div>
+      </div>
+      <hr class="edubreak">
+      <h5 style="font-size:25px;text-align:center;">Hobbies are part and parcel of human health hence very important.</h5>     
+</div>
+<div id="church" class="content-section"><h6 class="homeanime" Style="color:red;">CHURCH</h6><h6 style="text-align: center;color: magenta;font-size: 20px;">My Spiritual Journey & Involvements.</h6>
+  <div class="home-image-container">
+    <img src="church.jpg" alt="Church Image">
+    </div>
+</div>
 <div id="health" class="content-section"><h5>Health</h5><p>Wellness and fitness philosophy.</p></div>
 <div id="football" class="content-section"><h6>Football</h6><p>Stats, analysis, and passion for the sport.</p></div>
 <div id="leadership" class="content-section"><h1>Leadership</h1><p>Experience and roles held.</p></div>
 <div id="location" class="content-section"><h2>Location</h2><p>Where to find me.</p></div>
 <div id="contact" class="content-section"><h3>Contact</h3><p>Get in touch with me directly.</p></div>
-
+      <div>
 <footer>
   <p style="color:seagreen;font-size:25px"><b>Eltone Lucas™</b></p>
   <p><i>Follow Eltone Lucas On Social Media;</i></p>
@@ -353,7 +419,7 @@ As I look ahead to university and future opportunities, I remain grateful for th
   <p> Do Not Share My Personal Information!</p>
   
 </footer>
-
+</div>
 <script>
     function toggleSidebar() {
         const sidebar = document.getElementById("sidebar");
@@ -372,9 +438,7 @@ As I look ahead to university and future opportunities, I remain grateful for th
         // 2. Show the target section
         const targetSection = document.getElementById(id);
         targetSection.classList.add('active-section');
-        
-        // 3. Reset animation for Home
-        if(id === 'home') {
+if(id === 'home') {
             const title = targetSection.querySelector('.homeanime');
             title.style.animation = 'none';
             title.offsetHeight; 
@@ -401,3 +465,5 @@ As I look ahead to university and future opportunities, I remain grateful for th
 </body>
 </html>
 
+        
+      
