@@ -1,0 +1,393 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eltone Lucas Web</title>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Montserrat:wght@400&family=Orbitron:wght@500&family=Caveat:wght@600&family=Cinzel:wght@600&family=Exo+2:wght@600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <style>
+      .leader-link {
+    color: #0077cc;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.leader-link:hover {
+    color: #ff6600;
+    text-decoration: underline;
+}
+      .card-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    padding: 20px;
+    justify-content: center;
+}
+
+.card {
+    background: var(--bg-color); /* Uses your existing dark/light mode variable */
+    border: 1px solid magenta;
+    border-radius: 15px;
+    padding: 25px;
+    width: 300px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-5px); /* Lift effect on hover */
+}
+
+.card-icon {
+    background: mintcream;
+    color: #007bff;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+    font-size: 20px;
+    margin-bottom: 15px;
+}
+
+.card h3 { margin-top: 0; font-family: 'Montserrat', sans-serif; }
+
+      .edubreak {
+    width: 100%;
+    height: 6px;
+    margin: 30px 0;
+    background: linear-gradient(90deg, #007bff, #00d4ff, #007bff);
+    background-size: 200% 100%;
+    border-radius: 2px;
+    animation: pulseGradient 4s infinite ease-in-out;
+}
+
+@keyframes pulseGradient {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; opacity: 0.6; }
+    100% { background-position: 0% 50%; }
+}
+
+      .eduanime {
+    font-family: 'Montserrat', sans-serif;
+    text-align: center;
+    font-size: 2.8rem;
+    text-transform: uppercase;
+    background: linear-gradient(90deg, #333 0%, #007bff 50%, #333 100%);
+    background-size: 200% auto;
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+    animation: shine 3s linear infinite;
+}
+
+@keyframes shine {
+    to { background-position: 200% center; }
+}
+
+/* Ensure it looks great in Dark Mode */
+body.dark-mode .eduanime {
+    background: linear-gradient(90deg, #f4f4f4 0%, #00d4ff 50%, #f4f4f4 100%);
+    background-size: 200% auto;
+    background-clip: text;
+    -webkit-background-clip: text;
+}
+      .home-image-container {
+    margin: 25px 0;
+    text-align: center;
+}
+
+.home-image-container img {
+    width: 100%;
+    max-width: 400px; /* Adjust size to your preference */
+    height: auto;
+    border-radius: 15px; /* Adds a modern, soft look */
+    box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+    transition: transform 0.3s ease;
+}
+
+.home-image-container img:hover {
+    transform: scale(1.02); /* Slight zoom on hover for interactivity */
+}
+
+      .homesecbreak {
+    width: 100%;
+    height: 5px;
+    background-color: magenta;
+    margin: 20px 0;
+    position: relative;
+    overflow: hidden;
+}
+
+.homesecbreak::after {
+    content: '';
+    position: absolute;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent,Red, transparent);
+    animation: slideLine 3s infinite ease-in-out;
+}
+
+@keyframes slideLine {
+    0% { left: -100%; }
+    100% { left: 100%; }
+}
+    .homeanime {
+        font-family: 'Playfair Display', serif;
+        font-size: 2.5rem;
+        opacity: 0;
+        text-align:center;
+       color: green;
+        transform: translateY(30px);
+        animation: fadeInUp 1.5s ease-out forwards;
+    }
+
+    @keyframes fadeInUp {
+        to {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+        :root { --bg-color: #ffffff; --text-color: #333333; }
+        body.dark-mode { --bg-color: #1a1a1a; --text-color: #f4f4f4; }
+
+        body {
+          font-family: 'Times New Roman', serif;fontsize: 20px;line-height: 1.9; background-color: var(--bg-color);color:var(--text-color);margin:0;transition:0.3s;
+          }
+        .top-bar { display: flex; align-items: center; justify-content: space-between; padding: 15px 20px; background: green; border-bottom: 2px solid lightgreen; position: sticky; top: 0; z-index: 1000; }
+        .nav-group { display: flex; align-items: center; gap: 20px; }
+        .icon-btn { background: none; border: none; cursor: pointer; font-size: 1.2rem; color: #333; }
+
+        /* Sidebar */
+        #sidebar { height: 100%; width: 0; position: fixed; z-index: 2000; top: 0; left: 0; background: darkblue; overflow-x: hidden; transition: 0.5s; padding-top: 10px; }
+        #sidebar a { padding: 10px; display: block; color: white; text-weight:bold; text-decoration: none; font-family: 'Playfair Display',serif; }
+        #sidebar a:hover { background: lightcyan; }
+
+        /* Content Sections */
+        .content-section { display: none; padding: 40px; min-height: 300px; }
+        .active-section { display: block; }
+
+        /* Typography */
+        h1 { font-family: 'Playfair Display', serif; 
+          line-height:1.0;
+           }
+        h2 { font-family: 'Montserrat', sans-serif; }
+        h3 { font-family: 'Orbitron', sans-serif; }
+        h4 { font-family: 'Caveat', cursive; }
+        h5 { font-family: 'Cinzel', serif; }
+        h6 { font-family: 'Exo 2', sans-serif; }
+
+        /* Footer */
+        footer { text-align: center; padding: 20px; border-top: 3px solid darkgreen; margin-top: 5px;}
+        .social-icons a { margin: 0 10px; font-size: 1.5rem; color: var(--text-color); }
+        .settings-menu { display: none; position: absolute; right: 20px; top: 60px; background: white; border: 1px solid #ccc; padding: 10px; z-index: 3000; color: #333; }
+    </style>
+</head>
+<body>
+
+<div class="top-bar">
+    <div class="nav-group">
+        <button class="icon-btn" onclick="toggleSidebar()">☰</button>
+        <img src="logo.png" alt="Logo" width="30">
+        <strong><b>ELONE LUCAS</b></strong>
+    </div>
+    <div class="nav-group">
+        <button class="icon-btn"><i class="fas fa-search"></i></button>
+        <button class="icon-btn"><i class="fas fa-language"></i></button>
+        <button class="icon-btn" onclick="toggleSettings()">⋮</button>
+    </div>
+</div>
+
+<div id="settings-menu" class="settings-menu">
+    <div onclick="toggleDarkMode()" style="cursor:pointer; padding:5px;">Dark/Light Mode</div>
+    <div style="padding:5px;">About Website</div>
+    <div style="padding:5px;">Help</div>
+    <div style="padding:5px;">Feedback</div>
+</div>
+
+<div id="sidebar">
+    <a href="javascript:void(0)" onclick="toggleSidebar()"><b>CLOSE ×</b></a>
+    <a href="javascript:void(0)" onclick="showSection('home')"><b>HOME</b></a>
+    <a href="javascript:void(0)" onclick="showSection('education')"><b>EDUCATION</b></a>
+    <a href="javascript:void(0)" onclick="showSection('hobbies')"><b>HOBBIES</b></a>
+    <a href="javascript:void(0)" onclick="showSection('church')"><b>CHURCH</b></a>
+    <a href="javascript:void(0)" onclick="showSection('health')"><b>HEALTH</b></a>
+    <a href="javascript:void(0)" onclick="showSection('football')"><b>FOOTBALL</b></a>
+    <a href="javascript:void(0)" onclick="showSection('leadership')"><b>LEADERSHIP</b></a>
+    <a href="javascript:void(0)" onclick="showSection('location')"><b>LOCATION</b></a>
+    <a href="javascript:void(0)" onclick="showSection('contact')"><b>CONTACT</b></a>
+</div>
+<div id="home" class="content-section active-section"><h1 class="homeanime">WELCOME TO ELTONE LUCAS PERSONAL PORTFOLIO.</h1><p style="font-size: 20px; color:cadetblue;text-align:center"><b>Student | Web Developer | Football Enthusiast|</b></p>
+<hr class="homesecbreak">
+  <div class="home-image-container">
+    <figure>
+    <img src="homepic.png" alt="Eltone Lucas Profile Photo">
+      <figcaption> Eltone Lucas-Proffesional Web Developer.</figcaption>
+      </figure>
+    </div>
+  <hr class="homesecbreak">
+  <h1 style="text-align: center; font-size: 30px; color: blue;font-weight: bold;"> HOME PAGE </h1>
+  <p><b>Welcome</b> to my digital space. I am <b>Eltone Lucas</b>, a dedicated professional Web Developer specializing in both Frontend and Backend Web Development. My mission is to bridge the gap between complex computet language concepts and modern, engaging learning experiences. Beyond the classroom, I am a passionate coder and digital creator, constantly exploring the intersection of education, technology, and visual storytelling.This Profile Portfolio contain;</p>
+  <h4 style="color:green;font-size:20px">
+    <ol start="1">
+    <li>Education</li>
+      <li>Hobbies</li>
+      <li>Church</li>
+      <li>Health</li>
+      <li>Leadership</li>
+      <li>Football</li>
+      <li>Location</li>
+      <li>Contact</li>
+    </ol>
+    </h4>
+  <hr class="homesecbreak">
+  <h5 style="text-align: center;font-size: 25px;">
+    Visit Every Section Above And Get To Know Eltone Lucas Even More. Good Luck!</h5>
+</div>
+  
+<div id="education" class="content-section"><h2 class="eduanime">Education.</h2><h1 style="text-align:center;font-size:25;"><b>Academic history and certifications.</b></h1>
+  <div class="home-image-container">
+        <figure>
+            <img src="edupage.png" alt="Eltone Lucas Education">
+            <figcaption>My Academic Journey and Certifications.</figcaption>
+        </figure>
+    </div>
+  <hr class="edubreak">
+  <div class="card-container">
+    <div class="card">
+        <div class="card-icon"><i class="fas fa-graduation-cap"></i></div>
+        
+        <h1>Early & Primary Education</h1>
+        
+        <div class="home-image-container" style="margin: 10px 0;">
+            <img src="primary_school_image.jpg" alt="Primary Education" style="border-radius: 10px;">
+</div>
+</div>
+</div>
+  <h1 style="text-align:center;"> Nyamanga Disii Primary School.</h1>
+  <div class="home-image-container">
+    <figure>
+      <img src="nyamanga.jpg" alt="Primary school image">
+      <figcaption>Nyamanga Disii ECDE Kids</figcaption>
+      </figure>
+    </div>
+  <p>
+My educational journey began in 2011 when I joined Early Childhood Development Education (ECDE) at Nyamanga Disii Primary School. This marked the beginning of an important chapter in my life, where I developed the foundation of my academic, social, and personal growth.<br>
+
+Throughout my years in primary school, I remained committed to learning and actively participated in various school activities. The school environment nurtured my curiosity, discipline, leadership skills, and determination to succeed. During my time at Nyamanga Disii Primary School, I had the privilege of serving as the<a href="#leadership" class="leader-link"> School President</a>, a role that helped me develop responsibility, confidence, and leadership abilities.<br>
+
+After years of hard work, perseverance, and dedication, I successfully completed my primary education in 2022. I sat for the Kenya Certificate of Primary Education (KCPE) examination and achieved an impressive score of<b> 383 marks</b>. This accomplishment opened the door to the next stage of my academic journey and remains one of the proud milestones in my educational life.<br>
+
+Looking back, my primary school years were filled with valuable lessons, memorable experiences, lasting friendships, and personal growth that continue to shape who I am today.</p>
+  <hr class="edubreak">
+  <div class="card-container">
+    <div class="card">
+      <div class="card-icon"><i class="fas fa-graduation-cap"></i></div>
+      <h1>Secondary Education</h1>
+      <div class="home-image-container" style="margin:10px 0;">
+        <image src="secoimg.jpg" alt="High School Image" style="border-radius: 10px;">
+          </div>
+      </div>
+    </div>
+  <h1 style="text-align:center;">Kanga High School</h1>
+  <div class="home-image-container">
+    <figure>
+      <img src="khs.png" alt="Kanga High School">
+      <figcaption>Kanga School main gate</figcaption>
+    </figure>
+    </div>
+  <p>
+My secondary school journey began on 5<sup>th</sup> May 2022 when I joined Kanga High School, one of the leading academic institutions in Migori County. Stepping into high school marked a new phase of growth, learning, and self-discovery as I prepared for greater academic and personal challenges.<br>
+
+Throughout my four years at Kanga High School, I embraced the opportunities and responsibilities that came with secondary education. I worked diligently in my studies, participated in school activities, and developed valuable skills in leadership, teamwork, discipline, and critical thinking. I was a member of Victor Class, a class of 58 students, under the guidance of our class teacher, Mr. Odoyo Wycliffe (Ochieng Nyando).<br>
+
+In addition to academics, I served as the <a href="#leadership" class="leader-link">Deputy Geography Club Chairperson</a>, a leadership role that allowed me to contribute to the school's co-curricular activities while strengthening my organizational and communication skills.<br>
+
+My high school experience was shaped by the support of dedicated teachers, including our principal, Dr. Reuben Kodiango, PhD, whose leadership fostered a culture of excellence and ambition. The friendships, lessons, challenges, and achievements I encountered during these years helped shape my character and prepared me for the future.<br>
+
+On 21<sup>st</sup> November 2025, I successfully completed my secondary school education. I later sat for the Kenya Certificate of Secondary Education (KCSE) examination and attained an <b>A- (Minus) grade with 79 points</b>, a significant achievement that reflected my hard work, determination, and commitment to academic excellence.<br>
+
+As I look ahead to university and future opportunities, I remain grateful for the experiences and knowledge gained during my time at Kanga High School, which continue to inspire my pursuit of success and lifelong learning.</p>
+  <hr class="edubreak">
+  <h5 style="text-align:center; font-size:25px;">That is all about my education for now. University Education will be updated as soon as i report.</h5>
+ </div> 
+
+<div id="hobbies" class="content-section"><h3>Hobbies</h3><p>Things I enjoy doing in my free time.</p></div>
+<div id="church" class="content-section"><h4>Church</h4><p>My spiritual journey and involvements.</p></div>
+<div id="health" class="content-section"><h5>Health</h5><p>Wellness and fitness philosophy.</p></div>
+<div id="football" class="content-section"><h6>Football</h6><p>Stats, analysis, and passion for the sport.</p></div>
+<div id="leadership" class="content-section"><h1>Leadership</h1><p>Experience and roles held.</p></div>
+<div id="location" class="content-section"><h2>Location</h2><p>Where to find me.</p></div>
+<div id="contact" class="content-section"><h3>Contact</h3><p>Get in touch with me directly.</p></div>
+
+<footer>
+  <p style="color:seagreen;font-size:25px"><b>Eltone Lucas™</b></p>
+  <p><i>Follow Eltone Lucas On Social Media;</i></p>
+    <div class="social-icons">
+        <a href="https://wa.me/254781262529"><i class="fab fa-whatsapp"></i></a>
+        <a href="https://tiktok.com/@eltonelucas"><i class="fab fa-tiktok"></i></a>
+        <a href="https://x.com/eltonelucascz"><i class="fab fa-twitter"></i></a>
+        <a href="https://www.facebook.com/eltonelucas"><i class="fab fa-facebook"></i></a>
+        <a href="https://www.instagram.com/eltonelukas?igsh=MXY3MzQ1YXgzMzN6MA=="><i class="fab fa-instagram"></i></a>
+        <a href="https://www.youtube.com/@eltonelucas"><i class="fab fa-youtube"></i></a>
+        <a href="https://t.me/eltonelucas"><i class="fab fa-telegram"></i></a>
+    </div>
+  <p>© Eltone Lucas™ 2026 | ® All Rights Reserved</p>
+  <a href="#privacy">Privacy Policy</a>|
+  <a href="#terms"> Terms & Conditions</a>|
+  <a href="#cookies">Cookies</a>
+  <p> Do Not Share My Personal Information!</p>
+  
+</footer>
+
+<script>
+    function toggleSidebar() {
+        const sidebar = document.getElementById("sidebar");
+        sidebar.style.width = sidebar.style.width === "250px" ? "0" : "250px";
+    }
+
+    function toggleSettings() {
+        const menu = document.getElementById("settings-menu");
+        menu.style.display = menu.style.display === "block" ? "none" : "block";
+    }
+
+    function showSection(id) {
+        // 1. Hide all sections
+        document.querySelectorAll('.content-section').forEach(s => s.classList.remove('active-section'));
+        
+        // 2. Show the target section
+        const targetSection = document.getElementById(id);
+        targetSection.classList.add('active-section');
+        
+        // 3. Reset animation for Home
+        if(id === 'home') {
+            const title = targetSection.querySelector('.homeanime');
+            title.style.animation = 'none';
+            title.offsetHeight; 
+            title.style.animation = 'fadeInUp 1.5s ease-out forwards';
+        }
+        
+        // 4. Close the sidebar
+        toggleSidebar();
+    }
+
+    function toggleDarkMode() {
+        document.body.classList.toggle("dark-mode");
+    }
+
+    // Close menus when clicking outside
+    window.onclick = function(event) {
+        if (!event.target.matches('.icon-btn')) {
+            document.getElementById("settings-menu").style.display = "none";
+        }
+    }
+</script>
+
+
+</body>
+</html>
+
