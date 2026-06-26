@@ -11,8 +11,13 @@
 <link rel="icon" href="favicon.jpg" type="image/jpeg">
     
     <style>
-      /* ===== Top Branding Bar ===== */
-
+      .logo{
+    width:65px;
+    height:65px;
+    border-radius:50%;
+     object-fit: cover;
+        border:1px solid white;
+      }
 .brand-bar{
   position:sticky;
   top:0;
@@ -87,7 +92,7 @@ text-shadow:
 .search-container{
     display:none;
     position:fixed;
-    top:115px;   /* Adjust to fit below your brand bar + top bar */
+    top:135px;   /* Adjust to fit below your brand bar + top bar */
     left:0;
     width:100%;
     z-index:2000;
@@ -163,7 +168,7 @@ opacity:1;
     background:var(--bg-color);
     border-bottom:2px solid #ddd;
     position:sticky;
-    top:60px;
+    top:80px;
     z-index:999;
 }
 
@@ -892,11 +897,14 @@ body::after {
     transform: translate(0, 0) scale(1);
   }
 }
-        .top-bar { display: flex; align-items: center; justify-content: space-between; padding: 15px 20px; background: green; border-bottom: 2px solid lightgreen; position: sticky; top: 55px; z-index: 1000; }
-        .nav-group { display: flex; align-items: center; gap: 20px; }
-        .icon-btn { background: none; border: none; cursor: pointer; font-size: 1.2rem; color: #333; }
-
-        /* Sidebar */
+        .top-bar { display: flex; align-items: center; justify-content: space-between; padding: 0 20px; background: green; border-bottom: 2px solid lightgreen; position: sticky; top: 55px; z-index: 1000; height:80px; }
+        .nav-group { display: flex; align-items: center; gap: 18px; }
+        .icon-btn { background: none; border: none; cursor: pointer; width:56px; height:56px; display: flex; align-items: center; justify-content: center; font-size: 2rem; color: white;
+border-radius:50%; transition: 0.3s; }
+      .icon-btn:hover{
+        background: rgba(255, 255, 255, 0.18);
+        transform:scale(1.08);
+        }
         #sidebar { height: 100%; width: 0; position: fixed; z-index: 2000; top: 0; left: 0; background: darkblue; overflow-x: hidden; transition: 0.1s; padding-top: 10px; }
         #sidebar a { padding: 10px; display: block; color: white; text-weight:bold; text-decoration: none; font-family: 'Playfair Display',serif; }
         #sidebar a:hover { background: lightcyan; }
@@ -975,7 +983,7 @@ footer .social-icons a:hover {
 <div class="top-bar">
     <div class="nav-group">
         <button class="icon-btn" onclick="toggleSidebar()">☰</button>
-        <img src="logo.jpg" alt="Logo" width="30">
+        <img class="logo" src="logo.jpg" alt="Logo">
     </div>
     <div class="nav-group">
       <button class="icon-btn" onclick="toggleSearch()">
@@ -1250,7 +1258,9 @@ St. Antonio Okiro Catholic Church is more than a place of worship to me; it is m
     <div class="hero-image">
       <div class="tip-card">Stay Active <span>Move your body every day</span></div>
       <div class="tip-card">Eat Healthy <span>Fuel with nutrients</span></div>
+      <div class="home-image-container">
       <img src="footballer.jpg" alt="Health Journey">
+        </div>
     </div>
   </header>
     <div class="health-goals-section">
@@ -1376,13 +1386,7 @@ St. Antonio Okiro Catholic Church is more than a place of worship to me; it is m
                 Nyamanga FC.
             </p>
         </div>
-        <div class="hero-image">
-            <img src="messi.jpg" class="main-player">
-
-            <img src="yamal.jpg" class="floating left">
-            <img src="bruno.jpg" class="floating right">
-
-        </div>
+      
 
     </section>
 
@@ -1395,36 +1399,30 @@ St. Antonio Okiro Catholic Church is more than a place of worship to me; it is m
         <div class="club-grid">
 
             <div class="club-card">
-                <img src="manutd.jpg">
                 <h3>Man Utd</h3>
                 <p>20x League Titles</p>
             </div>
 
             <div class="club-card">
-                <img src="barca.jpg">
                 <h3>FC Barcelona</h3>
                 <p>5x Champions League</p>
             </div>
 
             <div class="club-card">
-                <img src="spain.jpg">
                 <h3>Spain</h3>
                 <p>2010 World Cup</p>
             </div>
 
             <div class="club-card">
-                <img src="gor.jpg">
                 <h3>Gor Mahia</h3>
                 <p>20x Kenyan PL</p>
             </div>
 
             <div class="club-card">
-                <img src="nyamanga.jpg">
                 <h3>Nyamanga FC</h3>
                 <p>Regional Champions</p>
             </div>
           <div class="club-card">
-            <img src="migori.jpg">
             <h3>Migori Youth FC</h3>
             <p>Regional Champions</p>
             </div>
@@ -1499,8 +1497,8 @@ St. Antonio Okiro Catholic Church is more than a place of worship to me; it is m
 
             <h2>Fan Insights & Strategic Legacy</h2>
 
-            <div class="box">
-
+            
+<div class="home-image-container">
                 <img src="chart.jpg">
 
             </div>
@@ -1537,11 +1535,12 @@ St. Antonio Okiro Catholic Church is more than a place of worship to me; it is m
     </div>
 </div>
 
-            <div class="box">
-
+            
+              <div class="home-image-container">
                 <img src="chart.jpg">
+                </div>
 
-            </div>
+    
 
         </div>
 
